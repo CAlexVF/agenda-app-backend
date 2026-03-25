@@ -1,6 +1,7 @@
 # app/main.py
+from app.models import Negocio, Servicio, Usuario
 from fastapi import FastAPI
-from app.routers import negocios
+from app.routers import negocios, usuarios
 
 # Inicializamos la aplicación
 app = FastAPI(
@@ -11,6 +12,7 @@ app = FastAPI(
 
 # Conectamos nuestro router de negocios a la app principal
 app.include_router(negocios.router)
+app.include_router(usuarios.router)
 
 @app.get("/")
 def raiz():

@@ -11,4 +11,5 @@ __pycache__/
 
 # Ocultos del sistema
 .VSCode/
+.vscode/
 .DS_Store
